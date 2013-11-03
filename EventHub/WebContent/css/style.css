@@ -1,0 +1,38 @@
+// Style for Home Page, Login and Registration
+
+body #d_header {
+	height: 106px;
+}
+
+body #d_header #heading {
+	width: 950px;
+	height: 120px; color : #FFFFFF;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-size: 32px;
+	margin: 0 auto;
+	position: relative;
+	background-color: #aa56ff;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 6px;
+	border: "0";
+	color: #FFFFFF;
+}
+
+body .d_footer {
+	position: center;
+	text-align: center;
+	
+}
+
+.img_theme .text {
+    position:absolute;
+    top:10px;
+    left:100px;
+    width:300px;
+}
+
+.s_heading{
+margin-left: 20px;
+display: inline;
+}
