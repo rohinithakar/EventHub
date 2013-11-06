@@ -1,4 +1,3 @@
-
 $(function() {
     var name = $( "#name" ),
       email = $( "#email" ),
@@ -35,15 +34,15 @@ $(function() {
         return true;
       }
     }
-   
  
     $( "#dialog-form" ).dialog({
       autoOpen: false,
-      height: 300,
+      height: 400,
       width: 350,
       modal: true,
       buttons: {
-        "Create an account": function() {
+    	 
+        "Register": function() {
           var bValid = true;
           allFields.removeClass( "ui-state-error" );
  
@@ -73,7 +72,7 @@ $(function() {
         allFields.val( "" ).removeClass( "ui-state-error" );
       }
     });
-   
+ 
     $( "#create-user" )
       .button()
       .click(function() {

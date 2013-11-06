@@ -1,5 +1,5 @@
 
-				var Page = (function() {
+				/*var Page = (function() {
 
 					var config = {
 						$bookBlock : $('#bb-bookblock'),
@@ -76,6 +76,4 @@
 					};
 
 				})();
-			
-				Page.init();
-			
+				Page.init(); */

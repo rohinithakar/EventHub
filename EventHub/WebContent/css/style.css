@@ -28,11 +28,34 @@ body .d_footer {
 .img_theme .text {
     position:absolute;
     top:10px;
-    left:100px;
+    left:20px;
     width:300px;
 }
 
 .s_heading{
 margin-left: 20px;
 display: inline;
+}
+
+.ui-dialog-titlebar{
+	color:#FFFFFF;
+	background:#72b890;
+}
+
+.ui-button-text{
+	color:#FFFFFF;
+	background:#72b890;
+}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 100px;
+    
+}
+
+input {
+  display: inline-block;
+  float: left;
 }

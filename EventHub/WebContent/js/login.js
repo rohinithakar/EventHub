@@ -37,13 +37,13 @@ $(function() {
     }
    
  
-    $( "#dialog-form" ).dialog({
+    $( "#dialog-form1" ).dialog({
       autoOpen: false,
-      height: 300,
-      width: 350,
+      height: 350,
+      width: 400,
       modal: true,
       buttons: {
-        "Create an account": function() {
+        "Login": function() {
           var bValid = true;
           allFields.removeClass( "ui-state-error" );
  
