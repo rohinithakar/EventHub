@@ -9,4 +9,14 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>GetToDoListItems</display-name>
+    <servlet-name>GetToDoListItems</servlet-name>
+    <servlet-class>servlets.GetToDoListItems</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetToDoListItems</servlet-name>
+    <url-pattern>/GetToDoListItems</url-pattern>
+  </servlet-mapping>
 </web-app>
