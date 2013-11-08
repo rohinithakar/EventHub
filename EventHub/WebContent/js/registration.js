@@ -1,8 +1,9 @@
 $(function() {
-    var name = $( "#name" ),
-      email = $( "#email" ),
-      password = $( "#password" ),
-      allFields = $( [] ).add( name ).add( email ).add( password ),
+    var name = $( "#name" );
+    var  email = $( "#email" );
+    var password = $( "#password" );
+    
+  /*  var  allFields = $( [] ).add( name ).add( email ).add( password ),
       tips = $( ".validateTips" );
  
     function updateTips( t ) {
@@ -33,7 +34,7 @@ $(function() {
       } else {
         return true;
       }
-    }
+    } */
  
     $( "#dialog-form" ).dialog({
       autoOpen: false,
@@ -43,6 +44,8 @@ $(function() {
       buttons: {
     	 
         "Register": function() {
+        	
+        /*	
           var bValid = true;
           allFields.removeClass( "ui-state-error" );
  
@@ -61,16 +64,42 @@ $(function() {
               "<td>" + email.val() + "</td>" +
               "<td>" + password.val() + "</td>" +
             "</tr>" );
+        	
             $( this ).dialog( "close" );
-          }
+          } */
+        	var user = {};
+        	user.firstName = fname.value;
+        	user.lastName = lname.value;
+        	user.email = email_reg.value;
+        	user.password = password_reg.value;
+        	
+        	var requestJson = JSON.stringify(user);
+        	console.log("Json String: "+requestJson);
+
+        	$.ajax({
+        		url: "GetRegistrationDetails",
+        		type: "POST",
+        		context: document.body,
+        		data: requestJson,
+        		success: function(data){
+        			if(data.errorCode == 200 && data.responseText == "Success"){
+        			console.log("success");
+        			alert("SignUp Successful..!!");
+        			}
+        			else{
+        				alert("Uh-oh - Something went wrong, try again!");
+        			}
+        		}
+        	});
+        	
         },
         Cancel: function() {
           $( this ).dialog( "close" );
         }
       },
       close: function() {
-        allFields.val( "" ).removeClass( "ui-state-error" );
-      }
+        allFields.val( "" ).removeClass( "ui-state-error" ); 
+      } 
     });
  
     $( "#create-user" )

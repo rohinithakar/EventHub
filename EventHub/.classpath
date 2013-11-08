@@ -13,5 +13,8 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="lib" path="Lib/jettison-1.3.3.jar"/>
+	<classpathentry kind="lib" path="Lib/json-lib-2.4-jdk15.jar"/>
+	<classpathentry kind="lib" path="Lib/mysql-connector-java-3.1.14-bin.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

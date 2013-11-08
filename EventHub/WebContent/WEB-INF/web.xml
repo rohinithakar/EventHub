@@ -19,4 +19,24 @@
     <servlet-name>GetToDoListItems</servlet-name>
     <url-pattern>/GetToDoListItems</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetRegistrationDetails</display-name>
+    <servlet-name>GetRegistrationDetails</servlet-name>
+    <servlet-class>servlets.GetRegistrationDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetRegistrationDetails</servlet-name>
+    <url-pattern>/GetRegistrationDetails</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>GetLoginDetails</display-name>
+    <servlet-name>GetLoginDetails</servlet-name>
+    <servlet-class>servlets.GetLoginDetails</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>GetLoginDetails</servlet-name>
+    <url-pattern>/GetLoginDetails</url-pattern>
+  </servlet-mapping>
 </web-app>

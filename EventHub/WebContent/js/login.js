@@ -1,11 +1,12 @@
 
 $(function() {
-    var name = $( "#name" ),
+   var name = $( "#name" ),
       email = $( "#email" ),
       password = $( "#password" ),
       allFields = $( [] ).add( name ).add( email ).add( password ),
       tips = $( ".validateTips" );
- 
+ /*
+    
     function updateTips( t ) {
       tips
         .text( t )
@@ -36,7 +37,7 @@ $(function() {
       }
     }
    
- 
+ */
     $( "#dialog-form1" ).dialog({
       autoOpen: false,
       height: 350,
@@ -44,6 +45,7 @@ $(function() {
       modal: true,
       buttons: {
         "Login": function() {
+        	/*
           var bValid = true;
           allFields.removeClass( "ui-state-error" );
  
@@ -61,9 +63,33 @@ $(function() {
               "<td>" + name.val() + "</td>" +
               "<td>" + email.val() + "</td>" +
               "<td>" + password.val() + "</td>" +
-            "</tr>" );
+            "</tr>" ); 
             $( this ).dialog( "close" );
-          }
+          } */
+        	
+        	var user = {};
+        	user.email = email_login.value;
+        	user.password = password_login.value;
+        	
+        	var requestJson = JSON.stringify(user);
+        	console.log("Json String: "+requestJson);
+
+        	$.ajax({
+        		url: "GetLoginDetails",
+        		type: "POST",
+        		context: document.body,
+        		data: requestJson,
+        		success: function(data){
+        			if(data.errorCode == 200 && data.responseText == "Success"){
+        			console.log("success");
+        			console.log("Login Successful..!!");
+        			}
+        			else{
+        				console.log("Uh-oh - Something went wrong, try again!");
+        			}
+        		}
+        	});
+        	
         },
         Cancel: function() {
           $( this ).dialog( "close" );
