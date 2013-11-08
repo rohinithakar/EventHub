@@ -30,6 +30,8 @@
 
 	<script src="js/registration.js"></script>
 	<script src="js/login.js"></script>
+	<script src="//connect.facebook.net/en_US/all.js"></script>
+	<script src="js/fb.js"></script>
 
 
 </head>
@@ -40,10 +42,25 @@
 		<div id="d_header">
 			<div id="heading">
 				<span class="s_heading">EventHub</span>
-				<a href="index.html" id="home"style="margin-left: 550px; font-size: 14px; color: #ffffff" data-inline="true">Home</a> 
+				<a href="index.html" id="home"style="margin-left: 500px; font-size: 14px; color: #ffffff" data-inline="true">Home</a> 
 				<a id="login-user" style="font-size: 14px; color: #561243" data-inline="true">Login</a>
 				<a id="create-user" style="font-size: 14px; color: #561243;" data-inline="true">Register</a> <br> 
-				<span class="s_heading" style="font-size: 14px;">Birthday &#9679; Wedding &#9679; Christmas</span>
+				<span class="s_heading" style="font-size: 14px; float:left">Birthday &#9679; Wedding &#9679; Christmas</span>
+				
+				  <div id="fb-root" style="data-inline:true"></div>
+				  
+   				  <div id = "fblogin"style="margin-left: 675px;data-inline:true;height:25px;"> 
+   				  <a href="javascript:login();"><img src="img/fb-login-button.png"></a>
+   				  </div>
+  			      <div id = "fblogout" style="margin-left: 675px;data-inline:true;visibility:hidden">
+  			      <a href="javascript:logout();"><img src="img/facebook_logout_button.png"></a>
+  			      <img id="profile_pic"/>
+  			      <div id="profile_name" style="font-size:12px;visibility:show;"></div> 
+  			      </div>
+  				  
+  				  
+    
+				
 			</div>
 		</div>
 		<br>
@@ -51,12 +68,12 @@
 			<div class="main clearfix">
 				<div class="bb-custom-wrapper">
 				
-					<nav>
+					<!--<nav>
 						<a id="bb-nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>
 						<a id="bb-nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
 						<a id="bb-nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
 						<a id="bb-nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
-					</nav>
+					</nav> -->
 					
 					<div id="bb-bookblock" class="bb-bookblock">
 						<div class="bb-item">
